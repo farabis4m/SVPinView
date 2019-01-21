@@ -35,6 +35,7 @@ public class SVPinView: UIView {
     @IBInspectable public var secureCharacter:String = "\u{25CF}"
     @IBInspectable public var interSpace:CGFloat = 5
     @IBInspectable public var textColor:UIColor = UIColor.black
+    public var tintColorPinView = UIColor.white
     @IBInspectable public var shouldSecureText:Bool = true
     @IBInspectable public var allowsWhitespaces:Bool = true
     @IBInspectable public var placeholder:String = ""
@@ -286,7 +287,7 @@ extension SVPinView : UICollectionViewDataSource, UICollectionViewDelegate, UICo
         textField.layer.sublayerTransform = CATransform3DMakeTranslation(-4, 0, 0)
         textField.isSecureTextEntry = false
         textField.textColor = self.textColor
-        textField.tintColor = textColor
+        textField.tintColor = tintColorPinView
         textField.font = self.font
         if #available(iOS 12.0, *), indexPath.row == 0, isContentTypeOneTimeCode {
             textField.textContentType = .oneTimeCode
