@@ -16,7 +16,7 @@ public enum SVPinViewStyle : Int {
 }
 
 @objc
-public class SVPinView: UIView {
+open class SVPinView: UIView {
     
     // MARK: - Private Properties -
     @IBOutlet fileprivate var collectionView : UICollectionView!
@@ -351,7 +351,7 @@ extension SVPinView : UICollectionViewDataSource, UICollectionViewDelegate, UICo
         return UIEdgeInsets(top: top, left: 0, bottom: 0, right: 0)
     }
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         flowLayout.invalidateLayout()
     }
 }
