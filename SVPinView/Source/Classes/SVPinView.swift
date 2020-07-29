@@ -82,6 +82,7 @@ open class SVPinView: UIView {
         collectionView.register(collectionViewNib, forCellWithReuseIdentifier: reuseIdentifier)
         flowLayout.scrollDirection = .vertical //weird!!!
         collectionView.isScrollEnabled = false
+        collectionView.semanticContentAttribute = .forceLeftToRight
         
         self.addSubview(view)
         view.frame = bounds
